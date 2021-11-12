@@ -25,5 +25,6 @@ int print_d(va_list ap);
 int print_b(va_list ap);
 int print_o(va_list ap);
 int print_hex(va_list ap);
+int print_X(va_list ap);
 opciones structops(int f);
 #endif
