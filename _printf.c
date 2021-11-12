@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		{"o", print_o},
 		{"x", print_hex},
 		{"X", print_X},
+		{"u", print_u},
 		{NULL, NULL}
 	};
 	va_start(ap, format);

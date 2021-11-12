@@ -3,6 +3,7 @@
  * convert_base - recursively prints an int into binary, octal or hex
  * @n: number to print
  * @base: base to convert to
+ * @upper: for upper or lower case hexa
  * Return: number of printed bytes
  */
 int convert_base(unsigned int n, int base, int upper)
@@ -18,9 +19,13 @@ int convert_base(unsigned int n, int base, int upper)
 		if (res >= 10 && base == 16)
 		{
 			if (upper == 0)
+			{
 				_putchar(res + 87); /*adds the character lower case to res*/
+			}
 			if (upper == 1)
-				 _putchar(res + 55); /*adds the character upper case to res*/
+			{
+				_putchar(res + 55); /*adds the character upper case to res*/
+			}
 		}
 		else
 			_putchar(res + '0');
@@ -37,7 +42,7 @@ int convert_base(unsigned int n, int base, int upper)
 int print_b(va_list ap)
 {
 	unsigned int n = va_arg(ap, int);
-	
+
 	if (n == 0)
 	{
 		_putchar('0');
