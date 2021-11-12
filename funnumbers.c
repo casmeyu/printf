@@ -48,9 +48,18 @@ int print_b(va_list ap)
  */
 int print_o(va_list ap)
 {
-	unsigned int n = va_arg(ap, int);
+	int n = va_arg(ap, int);
+	unsigned int aux;
 
-	return (convert_base(n, 8, 0));
+	if (n < 0)
+	{
+		aux = -n;
+		_putchar('-');
+	}
+	else
+		aux = n;
+
+	return (convert_base(aux, 8, 0));
 }
 /**
  * print_hex - prints a decimal in hex
@@ -59,9 +68,18 @@ int print_o(va_list ap)
  */
 int print_hex(va_list ap)
 {
-	unsigned int n = va_arg(ap, int);
+	int n = va_arg(ap, int);
+	unsigned int aux;
 
-	return (convert_base(n, 16, 0));
+	if (n < 0)
+	{
+		aux = -n;
+		_putchar('-');
+	}
+	else
+		aux = n;
+
+	return (convert_base(aux, 16, 0));
 }
 /**
  * print_X - prints a decimal in upper case HEX
@@ -70,7 +88,16 @@ int print_hex(va_list ap)
  */
 int print_X(va_list ap)
 {
-	unsigned int n = va_arg(ap, int);
+	int n = va_arg(ap, int);
+	unsigned int aux;
 
-	return (convert_base(n, 16, 1));
+	if (n < 0)
+	{
+		aux = -n;
+		_putchar('-');
+	}
+	else
+		aux = n;
+
+	return (convert_base(aux, 16, 1));
 }

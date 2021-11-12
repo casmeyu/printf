@@ -44,5 +44,10 @@ int main(void)
     _printf("hexa UPPER CASE: %X\n", 10);
     _printf("hexa lower case: %x\n", 579123);
     _printf("hexa UPPER CASE: %X\n", 579123);
+    _printf("hexa lower case: %x\n", -10);
+    _printf("hexa UPPER CASE: %X\n", -10);
+    _printf("hexa lower case: %x\n", -579123);
+    _printf("hexa UPPER CASE: %X\n", -579123);
+
     return (0);
 }
