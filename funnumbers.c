@@ -58,3 +58,14 @@ int print_hex(va_list ap)
 
 	return (convert_base(n, 16));
 }
+/**
+ * print_X - prints a decimal in upper case HEX
+ * @ap: list of arguments
+ * Return: the number of printed digits
+ */
+int print_X(va_list ap)
+{
+	unsigned int n = va_arg(ap, int);
+
+	return (convert_base(n, 16));
+}
