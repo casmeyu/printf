@@ -41,8 +41,7 @@ int print_b(va_list ap)
 	if (n == 0)
 	{
 		_putchar('0');
-		_putchar('0');
-		return (2);
+		return (convert_base(n, 2, 0) + 1);
 	}
 
 	return (convert_base(n, 2, 0));
