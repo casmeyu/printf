@@ -59,7 +59,7 @@ int print_o(va_list ap)
 	if (n == 0)
 	{
 		_putchar('0');
-		_putchar('0');
+		return (convert_base(n, 8, 0) + 1);
 	}
 
 	return (convert_base(n, 8, 0));
@@ -76,7 +76,7 @@ int print_hex(va_list ap)
 	if (n == 0)
 	{
 		_putchar('0');
-		_putchar('0');
+		return (convert_base(n, 16, 0) + 1);
 	}
 
 	return (convert_base(n, 16, 0));
@@ -93,7 +93,7 @@ int print_X(va_list ap)
 	if (n == 0)
 	{
 		_putchar('0');
-		_putchar('0');
+		return (convert_base(n, 16, 1) + 1);
 	}
 
 	return (convert_base(n, 16, 1));
