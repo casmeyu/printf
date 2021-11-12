@@ -5,18 +5,23 @@
  * @base: base to convert to
  * Return: number of printed bytes
  */
-int convert_base(unsigned int n, int base)
+int convert_base(unsigned int n, int base, int upper)
 {
 	int largo = 0, res;
 
 	if (n != 0)
 	{
 		res = (n % base);
-		largo += convert_base((n / base), base);
+		largo += convert_base((n / base), base, upper);
 
 		/* checks for the characters of hexa (a, b, c, d, e, f) */
 		if (res >= 10 && base == 16)
-			_putchar(res + 87); /*adds the character lower case to res*/
+		{
+			if (upper == 0)
+				_putchar(res + 87); /*adds the character lower case to res*/
+			if (upper == 1)
+				 _putchar(res + 55); /*adds the character upper case to res*/
+		}
 		else
 			_putchar(res + '0');
 
@@ -33,7 +38,7 @@ int print_b(va_list ap)
 {
 	unsigned int n = va_arg(ap, int);
 
-	return (convert_base(n, 2));
+	return (convert_base(n, 2, 0));
 }
 
 /**
@@ -45,7 +50,7 @@ int print_o(va_list ap)
 {
 	unsigned int n = va_arg(ap, int);
 
-	return (convert_base(n, 8));
+	return (convert_base(n, 8, 0));
 }
 /**
  * print_hex - prints a decimal in hex
@@ -56,7 +61,7 @@ int print_hex(va_list ap)
 {
 	unsigned int n = va_arg(ap, int);
 
-	return (convert_base(n, 16));
+	return (convert_base(n, 16, 0));
 }
 /**
  * print_X - prints a decimal in upper case HEX
@@ -67,5 +72,5 @@ int print_X(va_list ap)
 {
 	unsigned int n = va_arg(ap, int);
 
-	return (convert_base(n, 16));
+	return (convert_base(n, 16, 1));
 }

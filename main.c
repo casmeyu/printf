@@ -40,6 +40,9 @@ int main(void)
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
     _printf("Binary: %b\n", 7);
-    _printf("Binary: %b\n", -7);
+    _printf("hexa lower case: %x\n", 10);
+    _printf("hexa UPPER CASE: %X\n", 10);
+    _printf("hexa lower case: %x\n", 579123);
+    _printf("hexa UPPER CASE: %X\n", 579123);
     return (0);
 }

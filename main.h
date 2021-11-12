@@ -26,5 +26,6 @@ int print_b(va_list ap);
 int print_o(va_list ap);
 int print_hex(va_list ap);
 int print_X(va_list ap);
+int convert_base(unsigned int n, int base, int upper);
 opciones structops(int f);
 #endif
