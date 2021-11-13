@@ -87,13 +87,15 @@ int print_r(va_list ap)
 		_printf("(null)");
 		return (-1);
 	}
-	
-	for (largo = 0; s[largo]; largo++);
 
+	for (largo = 0; s[largo]; largo++)
+		;
+	
 	largo--;
+	
 	for (pos = largo; pos >= 0; pos--)
 		_putchar(s[pos]);
-	
+
 	return (largo);
 }
 
