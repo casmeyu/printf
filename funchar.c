@@ -72,27 +72,29 @@ int print_d(va_list ap)
 	return (convert_d(d));
 }
 /**
- * print_rev - prints str in rev
- *
+ * print_r - prints str in rev
  * @ap:arguments
+ * Return: number of printed bytes
  */
-
 int print_r(va_list ap)
 {
-	int lar, pos;
-	char *s = va_arg(ap, char *);
-	
+	char *s;
+	int largo, pos;
+
+	s = va_arg(ap, char *);
 	if (!s)
-		s = "(null)";
+	{
+		_printf("(null)");
+		return (-1);
+	}
+	
+	for (largo = 0; s[largo]; largo++);
 
-	for (lar = 0; s[lar]; lar++);
-
-	lar -= 1;
-
-	for (pos = lar; pos >= 0; pos--)
+	largo--;
+	for (pos = largo; pos >= 0; pos--)
 		_putchar(s[pos]);
 	
-	return(lar);
+	return (largo);
 }
 
 
