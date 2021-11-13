@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 		{"x", print_hex},
 		{"X", print_X},
 		{"u", print_u},
+		{"r", print_r},
 		{NULL, NULL}
 	};
 	va_start(ap, format);

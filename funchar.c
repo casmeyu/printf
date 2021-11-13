@@ -71,3 +71,46 @@ int print_d(va_list ap)
 
 	return (convert_d(d));
 }
+/**
+ * print_rev - prints str in rev
+ *
+ * @ap:arguments
+ */
+
+int print_r(va_list ap)
+{
+	int lar, pos;
+	char *s = va_arg(ap, char *);
+	
+	if (!s)
+		s = "(null)";
+
+	for (lar = 0; s[lar]; lar++);
+
+	lar -= 1;
+
+	for (pos = lar; pos >= 0; pos--)
+		_putchar(s[pos]);
+	
+	return(lar);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
